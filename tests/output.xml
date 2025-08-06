@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-08-02T18:59:06.407343" rpa="false" schemaversion="5">
+<suite id="s1" name="Customer Service Negative" source="D:\ISI\MASTER\Master-1\2nd SEMESTRE\5 - Qa_Test\lab2_customer_service\tests\customer_service_negative.robot">
+<test id="s1-t1" name="Vérifier erreur mot de passe incorrect" line="9">
+<kw name="Ouvrir le site CRM" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-02T18:59:07.067170" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm/index.html'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-02T18:59:07.066569" elapsed="26.348399"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-02T18:59:33.415738" elapsed="0.076427"/>
+</kw>
+<doc>Ouvre le navigateur et charge la page CRM</doc>
+<status status="PASS" start="2025-08-02T18:59:07.064941" elapsed="26.427565"/>
+</kw>
+<kw name="Se connecter avec email et mot de passe" owner="keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-08-02T18:59:33.495541" level="INFO">Clicking link 'Sign In'.</msg>
+<arg>Sign In</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T18:59:33.494854" elapsed="0.786002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-02T18:59:34.281885" level="INFO">Typing text 'testuser@example.com' into text field 'id=email-id'.</msg>
+<arg>id=email-id</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T18:59:34.281277" elapsed="0.369986"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-02T18:59:34.652731" level="INFO">Typing text 'wrongpass' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T18:59:34.651878" elapsed="0.261295"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-02T18:59:34.914450" level="INFO">Clicking button 'id=submit-id'.</msg>
+<arg>id=submit-id</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T18:59:34.913772" elapsed="0.464540"/>
+</kw>
+<arg>${VALID_EMAIL}</arg>
+<arg>${INVALID_PASS}</arg>
+<status status="PASS" start="2025-08-02T18:59:33.493610" elapsed="1.885261"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-02T18:59:36.767015" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-02T18:59:36.767580" level="FAIL">Page should have contained text 'Invalid' but did not.</msg>
+<arg>Invalid</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-08-02T18:59:35.380121" elapsed="1.396724">Page should have contained text 'Invalid' but did not.</status>
+</kw>
+<kw name="Fermer le navigateur" owner="keywords">
+<doc>Ferme la fenêtre du navigateur</doc>
+<status status="NOT RUN" start="2025-08-02T18:59:36.777956" elapsed="0.000203"/>
+</kw>
+<doc>Test négatif – Affiche message contenant "Invalid"</doc>
+<tag>NEGATIVE</tag>
+<status status="FAIL" start="2025-08-02T18:59:07.062857" elapsed="29.716255">Page should have contained text 'Invalid' but did not.</status>
+</test>
+<test id="s1-t2" name="Vérifier erreur email vide" line="17">
+<kw name="Ouvrir le site CRM" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-02T18:59:36.783653" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm/index.html'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-02T18:59:36.783153" elapsed="5.231041"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-02T18:59:42.014739" elapsed="0.079538"/>
+</kw>
+<doc>Ouvre le navigateur et charge la page CRM</doc>
+<status status="PASS" start="2025-08-02T18:59:36.782514" elapsed="5.312175"/>
+</kw>
+<kw name="Se connecter avec email et mot de passe" owner="keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-08-02T18:59:42.098616" level="INFO">Clicking link 'Sign In'.</msg>
+<arg>Sign In</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T18:59:42.098020" elapsed="0.705777"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-02T18:59:42.805416" level="INFO">Typing text '' into text field 'id=email-id'.</msg>
+<arg>id=email-id</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T18:59:42.804453" elapsed="0.234673"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-02T18:59:43.040473" level="INFO">Typing text 'Password123' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T18:59:43.039730" elapsed="0.290269"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-02T18:59:43.331161" level="INFO">Clicking button 'id=submit-id'.</msg>
+<arg>id=submit-id</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T18:59:43.330496" elapsed="0.267304"/>
+</kw>
+<arg>${EMPTY}</arg>
+<arg>${VALID_PASS}</arg>
+<status status="PASS" start="2025-08-02T18:59:42.095925" elapsed="1.502446"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-02T18:59:45.563380" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-02T18:59:45.564070" level="FAIL">Page should have contained text 'required' but did not.</msg>
+<arg>required</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-08-02T18:59:43.599243" elapsed="1.968033">Page should have contained text 'required' but did not.</status>
+</kw>
+<kw name="Fermer le navigateur" owner="keywords">
+<doc>Ferme la fenêtre du navigateur</doc>
+<status status="NOT RUN" start="2025-08-02T18:59:45.568259" elapsed="0.000098"/>
+</kw>
+<doc>Test négatif – Affiche message contenant "required"</doc>
+<tag>NEGATIVE</tag>
+<status status="FAIL" start="2025-08-02T18:59:36.781265" elapsed="8.787691">Page should have contained text 'required' but did not.</status>
+</test>
+<doc>Tests négatifs – Customer Service (erreurs attendues, assertions souples)</doc>
+<status status="FAIL" start="2025-08-02T18:59:06.413574" elapsed="39.157689"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">NEGATIVE</stat>
+</tag>
+<suite>
+<stat name="Customer Service Negative" id="s1" pass="0" fail="2" skip="0">Customer Service Negative</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
